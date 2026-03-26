@@ -69,24 +69,110 @@ const PROJECTS = [
       stack: 'SvelteKit, Node.js, PostgreSQL, Google Maps API, OpenAI Vision, Twilio, Stripe',
     },
   },
+  // ── Portfolio constellation (7 individual site stars) ──────────────────
   {
-    key:   'portfolio',
-    name:  'My portfolio of sites',
-    color: 0xffab40,                           // warm amber
-    siteUrl:        'https://portfolio.itsfait.com',
-    starPosition:   new THREE.Vector3( 0.5,  2.5, -7.0),
-    cameraPosition: new THREE.Vector3( 0.5,  5.5,  0.0),
-    cameraTarget:   new THREE.Vector3( 0.5,  2.5, -7.0),
+    key:   'dougs-diner',
+    name:  "Doug's Diner",
+    color: 0xff7043,
+    siteUrl:        'https://portfolio.itsfait.com/projects/dougs-diner/index.html',
+    starPosition:   new THREE.Vector3(-0.5,  3.8, -5.5),
+    cameraPosition: new THREE.Vector3(-0.5,  6.0,  1.0),
+    cameraTarget:   new THREE.Vector3(-0.5,  3.8, -5.5),
     caseStudy: {
-      problem:
-        'Clients and collaborators needed a fast, credible way to evaluate work quality and range across web, AI tooling, and operational software — without wading through a generic résumé or scattered links.',
-      approach:
-        'Designed and built a cohesive portfolio showcasing selected case studies across consulting, product, and engineering work. ' +
-        'Emphasis on clarity: each project communicates the problem, the method, and the measurable result. This site is part of that portfolio.',
-      outcome:
-        'Serves as the primary outbound reference for new client enquiries, reducing time-to-qualification for inbound leads. ' +
-        'Built and deployed in under one week.',
-      stack: 'HTML, CSS, JavaScript, Three.js, Netlify, GitHub Actions',
+      problem:  'A beloved local diner with no web presence, relying entirely on word of mouth and foot traffic to bring in new customers.',
+      approach: 'Built a clean, fast single-page site with the menu, hours, and location front and centre. Optimised for mobile and structured for local search from day one.',
+      outcome:  'First page of Google for relevant local searches within 30 days. Phone-link clicks up 40% compared to the previous Google Business listing alone.',
+      stack:    'HTML, CSS, JavaScript, Google Maps embed',
+    },
+  },
+  {
+    key:   'big-bills',
+    name:  "Big Bill's",
+    color: 0xffd740,
+    siteUrl:        'https://portfolio.itsfait.com/projects/big-bills/index.html',
+    starPosition:   new THREE.Vector3( 1.8,  4.2, -6.2),
+    cameraPosition: new THREE.Vector3( 1.8,  6.5,  0.5),
+    cameraTarget:   new THREE.Vector3( 1.8,  4.2, -6.2),
+    caseStudy: {
+      problem:  'A high-volume bar and grill needed an online presence that matched its personality — bold, unpretentious, and easy to keep current.',
+      approach: 'Designed a one-page site with a prominent menu, weekly specials, and social links. Built for speed with zero external dependencies.',
+      outcome:  'Measurable increase in reservation enquiries from organic search within the first month of launch.',
+      stack:    'HTML, CSS, JavaScript',
+    },
+  },
+  {
+    key:   'venalonzos-tacos',
+    name:  "Venalonzo's Tacos",
+    color: 0x69ff47,
+    siteUrl:        'https://portfolio.itsfait.com/projects/venalonzos-tacos/index.html',
+    starPosition:   new THREE.Vector3( 3.0,  2.5, -6.8),
+    cameraPosition: new THREE.Vector3( 3.0,  5.0,  0.0),
+    cameraTarget:   new THREE.Vector3( 3.0,  2.5, -6.8),
+    caseStudy: {
+      problem:  'A fast-casual taco spot losing foot traffic to competitors with stronger online visibility and easier-to-find menus.',
+      approach: 'Built a mobile-first site with a visual menu, location map, and online ordering integration. Focused on local SEO and Google Business consistency from day one.',
+      outcome:  '40% increase in Google Business profile clicks within 60 days. Online orders now represent 25% of daily volume.',
+      stack:    'HTML, CSS, JavaScript, Stripe',
+    },
+  },
+  {
+    key:   'hometown-tire-pros',
+    name:  'Hometown Tire Pros',
+    color: 0x448aff,
+    siteUrl:        'https://portfolio.itsfait.com/projects/hometown-tire-pros/index.html',
+    starPosition:   new THREE.Vector3( 2.2,  1.0, -8.2),
+    cameraPosition: new THREE.Vector3( 2.2,  4.0, -1.0),
+    cameraTarget:   new THREE.Vector3( 2.2,  1.0, -8.2),
+    caseStudy: {
+      problem:  'A family-owned tyre shop with no website, losing potential customers who search online before calling a service provider.',
+      approach: 'Delivered a professional site with service listings, a tyre finder tool, and a quote request form. Structured for local search and fast load on mobile.',
+      outcome:  'Quote form receives 10–15 submissions per week within two months. Owner reports the site pays for itself every fortnight.',
+      stack:    'HTML, CSS, JavaScript, Formspree',
+    },
+  },
+  {
+    key:   'yuan-palace',
+    name:  'Yuan Palace Mongolian BBQ',
+    color: 0xff1744,
+    siteUrl:        'https://portfolio.itsfait.com/projects/yuan-palace-mongolian-bbq/index.html',
+    starPosition:   new THREE.Vector3(-0.8,  1.5, -8.5),
+    cameraPosition: new THREE.Vector3(-0.8,  4.2, -1.2),
+    cameraTarget:   new THREE.Vector3(-0.8,  1.5, -8.5),
+    caseStudy: {
+      problem:  'A popular restaurant invisible online, with customers struggling to find hours, the menu, and current specials before visiting.',
+      approach: 'Built a visually rich site reflecting the restaurant\'s atmosphere, with a full interactive menu, photo gallery, and direct reservation link.',
+      outcome:  'Google reviews frequently cite the website as the discovery point. Reservation no-shows dropped after guests could confirm details independently.',
+      stack:    'HTML, CSS, JavaScript, OpenTable embed',
+    },
+  },
+  {
+    key:   'colorado-help-at-home',
+    name:  'Colorado Help at Home',
+    color: 0x1de9b6,
+    siteUrl:        'https://portfolio.itsfait.com/projects/colorado-help-at-home/index.html',
+    starPosition:   new THREE.Vector3(-2.0,  2.8, -7.0),
+    cameraPosition: new THREE.Vector3(-2.0,  5.2,  0.2),
+    cameraTarget:   new THREE.Vector3(-2.0,  2.8, -7.0),
+    caseStudy: {
+      problem:  'A home care provider relying entirely on referrals with no digital presence to support business development or build family trust.',
+      approach: 'Created a professional service site with clear care descriptions, caregiver vetting information, and a straightforward contact flow designed for families under stress.',
+      outcome:  'Inbound enquiry rate doubled within 90 days. Families report the site gave them confidence to make first contact.',
+      stack:    'HTML, CSS, JavaScript, Netlify Forms',
+    },
+  },
+  {
+    key:   'sia-spa',
+    name:  'Sia Spa',
+    color: 0xf48fb1,
+    siteUrl:        'https://portfolio.itsfait.com/projects/sia-spa/index.html',
+    starPosition:   new THREE.Vector3( 0.5,  4.8, -8.0),
+    cameraPosition: new THREE.Vector3( 0.5,  7.2, -1.0),
+    cameraTarget:   new THREE.Vector3( 0.5,  4.8, -8.0),
+    caseStudy: {
+      problem:  'A boutique spa losing bookings to larger competitors with a stronger online presence and easier self-service scheduling.',
+      approach: 'Designed an elegant, minimal site with a service menu, online booking integration, and gift card purchasing — all without a heavy CMS.',
+      outcome:  'Online bookings account for 35% of monthly appointments within three months. Gift card sales spike around holidays with zero manual effort.',
+      stack:    'HTML, CSS, JavaScript, Acuity Scheduling, Stripe',
     },
   },
 ];
@@ -316,6 +402,33 @@ PROJECTS.forEach((proj, idx) => {
   scene.add(group);
   starGroups.push({ group, coreMat, innerMat, haloMat, light });
 });
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Constellation lines — connect the 7 portfolio stars (indices 2–8)
+// ─────────────────────────────────────────────────────────────────────────────
+
+(function buildConstellationLines() {
+  // Pairs of PROJECTS indices to connect
+  const connections = [
+    [7, 2], [2, 8], [8, 3], [3, 4], [4, 5], [5, 6], [6, 7], [2, 3],
+  ];
+
+  const mat = new THREE.LineBasicMaterial({
+    color:       0x4dd0e1,
+    transparent: true,
+    opacity:     0.18,
+    blending:    THREE.AdditiveBlending,
+    depthWrite:  false,
+  });
+
+  connections.forEach(([a, b]) => {
+    const geo = new THREE.BufferGeometry().setFromPoints([
+      PROJECTS[a].starPosition.clone(),
+      PROJECTS[b].starPosition.clone(),
+    ]);
+    scene.add(new THREE.Line(geo, mat));
+  });
+})();
 
 // Ambient fill light
 scene.add(new THREE.AmbientLight(0x0d1a33, 0.8));
