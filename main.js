@@ -439,7 +439,7 @@ function updatePanel(idx, animate = true) {
       `${idx + 1}\u2009/\u2009${PROJECTS.length}`;
 
     // Screenshot + link
-    const screenshotUrl = `https://image.thum.io/get/width/640/crop/400/${proj.siteUrl}`;
+    const screenshotUrl = `https://s.wordpress.com/mshots/v1/${encodeURIComponent(proj.siteUrl)}?w=640&h=400`;
     const img  = document.getElementById('project-screenshot');
     const link = document.getElementById('project-link');
     img.src    = screenshotUrl;
