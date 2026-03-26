@@ -53,6 +53,7 @@ const PROJECTS = [
     key:   'homeservices',
     name:  'FAIT Home Services',
     color: 0xe040fb,                           // vibrant magenta
+    starScale:      3,
     siteUrl:        'https://itsfait.com',
     starPosition:   new THREE.Vector3( 5.0, -0.5,  2.5),
     cameraPosition: new THREE.Vector3( 5.0,  3.0,  9.5),
@@ -399,8 +400,11 @@ PROJECTS.forEach((proj, idx) => {
   const light = new THREE.PointLight(proj.color, 1.2, 9);
   group.add(light);
 
+  // Apply base scale if defined on the project
+  if (proj.starScale) group.scale.setScalar(proj.starScale);
+
   scene.add(group);
-  starGroups.push({ group, coreMat, innerMat, haloMat, light });
+  starGroups.push({ group, coreMat, innerMat, haloMat, light, baseScale: proj.starScale || 1 });
 });
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -582,13 +586,13 @@ function updatePanel(idx, animate = true) {
 // ─────────────────────────────────────────────────────────────────────────────
 
 function updateStarVisuals() {
-  starGroups.forEach(({ group, innerMat, haloMat, light }, idx) => {
+  starGroups.forEach(({ group, innerMat, haloMat, light, baseScale }, idx) => {
     const selected = idx === currentIndex;
     const hovered  = idx === hoveredIndex;
 
     // Base scale (pulse is layered on top in the render loop)
     if (!selected) {
-      group.scale.setScalar(hovered ? 1.22 : 1.0);
+      group.scale.setScalar((hovered ? 1.22 : 1.0) * baseScale);
     }
     // Glow opacity
     innerMat.opacity = selected ? 0.28 : hovered ? 0.22 : 0.18;
@@ -790,7 +794,7 @@ function animate() {
   pulseT += delta * 1.6;
   const pulseFactor = 1.0 + Math.sin(pulseT) * 0.07;
   const sg = starGroups[currentIndex];
-  if (sg) sg.group.scale.setScalar(1.45 * pulseFactor);
+  if (sg) sg.group.scale.setScalar(1.45 * pulseFactor * sg.baseScale);
 
   controls.update();
   renderer.render(scene, camera);
